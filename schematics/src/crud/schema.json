@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "crud",
+  "type": "object",
+  "properties": {
+    "path": {
+      "description": "The path to create the module.",
+      "type": "string",
+      "format": "path",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "CRUD name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the module? (eg.: company)"
+    },
+    "id": {
+      "type": "string",
+      "description": "ID name",
+      "x-prompt": "What is the primary key that is being used? (eg.: id)"
+    },
+    "pluralizedName": {
+      "type": "string",
+      "description": "Pluralized name",
+      "x-prompt": "What is the pluralized name? (eg.: companies)"
+    }
+  },
+  "required": ["name", "id"]
+}

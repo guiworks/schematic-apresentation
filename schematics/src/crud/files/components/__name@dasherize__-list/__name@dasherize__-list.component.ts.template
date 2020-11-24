@@ -1,0 +1,73 @@
+import { Component } from '@angular/core';
+import {
+  PoBreadcrumb,
+  PoNotificationService,
+  PoTableColumn,
+} from '@po-ui/ng-components';
+import { Router } from '@angular/router';
+import { TranslocoService } from '@ngneat/transloco';
+import { <%= classify(name) %>Service } from '../../services/<%= name %>.service';
+import { PoPageDynamicTableActions } from '@po-ui/ng-templates';
+
+@Component({
+  selector: 'erp-<%= name %>-list',
+  templateUrl: './<%= name %>-list.component.html',
+  styleUrls: ['./<%= name %>-list.component.scss'],
+})
+export class <%= classify(name) %>ListComponent {
+  public detailValues;
+
+  readonly columns: PoTableColumn[] = [
+    {
+      property: '<%= id %>',
+      label: this.translocoService.translate('<%= name %>.<%= name %>Number'),
+    },
+    {
+      property: 'descricao',
+      label: this.translocoService.translate('<%= name %>.<%= name %>Description'),
+    },
+  ];
+
+  readonly actions: PoPageDynamicTableActions = {
+    new: '/<%= name %>/create',
+    edit: '/<%= name %>/edit/:id',
+    remove: true,
+    removeAll: false,
+  };
+
+  readonly fields: Array<any> = [
+    {
+      property: '<%= id %>',
+      key: true,
+      label: this.translocoService.translate('<%= name %>.<%= name %>Number'),
+      visible: true,
+      filter: true,
+    },
+    {
+      property: 'descricao',
+      label: this.translocoService.translate('<%= name %>.<%= name %>Description'),
+      filter: true,
+      gridColumns: 6,
+    },
+  ];
+
+  readonly breadcrumb: PoBreadcrumb = {
+      items: [
+        {
+          label: this.translocoService.translate('common.home'),
+          link: '/',
+        },
+        {
+          label: this.translocoService.translate('<%= name %>.<%= name %>'),
+          link: '/<%= name %>',
+        },
+      ],
+    };
+
+  constructor(
+    private <%= name %>Service: <%= classify(name) %>Service,
+    private router: Router,
+    private poNotificationService: PoNotificationService,
+    private translocoService: TranslocoService
+  ) {}
+}

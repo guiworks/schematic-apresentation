@@ -1,0 +1,71 @@
+<div
+  class="po-mt-3 d-flex align-items-center justify-content-between head-title"
+>
+  <div class="d-flex align-items-center">
+    <img
+      src="assets/icons/back.png"
+      class="po-ml-1 po-mr-2 po-clickable"
+      [routerLink]="['/user']"
+    />
+    <span class="po-font-subtitle">
+      {{
+        (isEditing ? 'user.editUser' : 'user.newUser')
+          | transloco: { item: itemForm.value.descricao }
+      }}
+    </span>
+  </div>
+</div>
+
+<form [formGroup]="itemForm">
+  <div class="po-mt-3">
+    <ni-collapsible-widget [label]="'user.user' | transloco">
+      <div class="po-row">
+        <po-input
+          class="po-md-4"
+          name="id"
+          p-auto-focus
+          [p-label]="'user.userNumber' | transloco"
+          formControlName="id"
+          p-required="true"
+          [p-disabled]="isEditing"
+        >
+        </po-input>
+        <po-input
+          class="po-md-4"
+          name="descricao"
+          p-auto-focus
+          [p-label]="'user.userDescription' | transloco"
+          formControlName="descricao"
+          p-required="true"
+        >
+        </po-input>
+        <po-switch
+          class="po-md-1"
+          name="ativo"
+          [p-label]="'common.active' | transloco"
+          p-label-off=" "
+          p-label-on=" "
+          formControlName="ativo"
+          p-required="true"
+        >
+        </po-switch>
+      </div>
+    </ni-collapsible-widget>
+  </div>
+
+  <div class="po-mt-3 po-pull-right">
+    <po-button
+      name="cancel"
+      class="po-mr-2"
+      [p-label]="'common.cancel' | transloco"
+      [routerLink]="['/user']"
+    ></po-button>
+
+    <po-button
+      name="saveItem"
+      [p-label]="'common.save' | transloco"
+      p-type="primary"
+      (click)="onSubmit(itemForm)"
+    ></po-button>
+  </div>
+</form>
