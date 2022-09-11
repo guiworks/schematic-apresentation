@@ -4,7 +4,7 @@ Projeto feito para ensinar o uso da biblioteca do @angular/schematics para ajuda
 Caso queira ver a explicação em vídeo, eu fiz uma mini palestra explicando como funciona e como você consegue usar e aplicar isso utilizando o schematics do angular. 
 
 Confira abaixo a apresentação que eu fiz sobre o uso do schematics do angular no Angular Rio, comunidade na qual faço parte. 
-https://www.youtube.com/watch?v=7u2uJ4JmqBs
+[![Angular Rio Meetup](https://img.youtube.com/vi/7u2uJ4JmqBs/0.jpg)](https://www.youtube.com/watch?v=7u2uJ4JmqBs)
 
 
 # Introduction (English)
