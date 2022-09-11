@@ -12,7 +12,7 @@ link: https://www.youtube.com/watch?v=7u2uJ4JmqBs
 
 # Introduction (English)
 
-Project made to teach the use of @angular/schematics library to help your routine on cruds creation repetly times on long it's sprints.
+Project made to teach the use of @angular/schematics library to help your routine on cruds creation several times along it's sprints.
 If you want the explanation in video, I did a mini apresentation explain how to works and how you can use and apply it using the schematics library from Angular.
 
 Check it ou below the apresentation I did about the use of schematics from angular at Angular Rio, Angular Community which I'm part of:
