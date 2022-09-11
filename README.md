@@ -5,6 +5,7 @@ Caso queira ver a explicação em vídeo, eu fiz uma mini palestra explicando co
 
 Confira abaixo a apresentação que eu fiz sobre o uso do schematics do angular no Angular Rio, comunidade na qual faço parte. 
 [![Angular Rio Meetup](https://img.youtube.com/vi/7u2uJ4JmqBs/0.jpg)](https://www.youtube.com/watch?v=7u2uJ4JmqBs)
+link: https://www.youtube.com/watch?v=7u2uJ4JmqBs
 
 
 # Introduction (English)
@@ -12,7 +13,7 @@ Confira abaixo a apresentação que eu fiz sobre o uso do schematics do angular 
 Project made to teach the use of @angular/schematics library to help your routine on cruds creation repetly times on long it's sprints.
 If you want the explanation in video, I did a mini apresentation explain how to works and how you can use and apply it using the schematics library from Angular.
 
-Check it ou below the apresentation I did about the use of schematics from angular at Angular Rio, community which I m a part:
+Check it ou below the apresentation I did about the use of schematics from angular at Angular Rio, Angular Community which I'm part of:
 https://www.youtube.com/watch?v=7u2uJ4JmqBs&
 
 
